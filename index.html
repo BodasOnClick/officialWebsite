@@ -1,0 +1,100 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BodaOnClick</title>  
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>BodaOnClick</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Calculadora de precio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2>Haz llegar tu boda en formato digital con un solo click</h2>
+  </section>
+
+  <section id="nosotros" class="about">
+    <h2>Nuestra Historia</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          En <strong>BodasOnClick</strong> nacimos de una idea sencilla: transformar momentos únicos en experiencias digitales inolvidables. Desde nuestros inicios, hemos ayudado a decenas de parejas a compartir su gran día con estilo, emoción y tecnología.
+        </p>
+        <p>
+          Nuestro equipo está formado por diseñadores y desarrolladores apasionados por los detalles. Cada boda que realizamos es única, y nos encanta personalizar cada web para que refleje la personalidad de la pareja.
+        </p>
+        <p>
+          Además de las webs en formato de invitación, ofrecemos servicios de gestión de confirmaciones, galerías multimedia privadas y paneles de recuerdos donde tus invitados pueden dejar mensajes llenos de cariño.
+        </p>
+        <p>
+          Queremos que tú solo te preocupes por disfrutar... lo digital, lo dejamos en nuestras manos ❤️.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="services">
+    <h2>Servicios</h2>
+    <div class="card" onclick="toggleInfo(0)">
+      Webs Personalizadas
+      <div class="info">Creamos una página web única y personalizada para vuestra boda, adaptada a vuestros gustos, colores y estilo.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(1)">
+      Registro de Invitados
+      <div class="info">Gestiona las confirmaciones de asistencia de tus invitados desde un formulario sencillo y elegante.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(2)">
+      Acceso online a las fotos del evento
+      <div class="info">Una galería privada online donde podréis subir y ver todas las fotos y vídeos de vuestro gran día.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(3)">
+      Panel de comentarios/recuerdos
+      <div class="info">Un espacio donde vuestros seres queridos pueden dejar mensajes, recuerdos y buenos deseos.</div>
+    </div>
+  </section>
+
+  <section id="precios" class="pricing">
+    <h2>Calcula tu presupuesto</h2>
+    <form oninput="calcularPrecio()">
+      <label for="tipo">Tipo de Evento</label>
+      <select id="tipo">
+        <option value="low-cost">Plantilla Low-Cost</option>
+        <option value="basic">Plantilla Básica Personalizada</option>
+        <option value="personalizada">Plantilla Totalmente Personalizada</option>
+      </select>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" id="formulario"/> Formulario de Invitados</label>
+        <label><input type="checkbox" id="foto"/> Soporte Online de Fotos y Videos</label>
+        <label><input type="checkbox" id="comentarios"/> Panel de  comentarios</label>
+      </div>
+
+      <div class="result" id="resultado">Precio estimado: €0</div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 BodaOnClick · Síguenos en redes sociales</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/bodaonclick/" target="_blank" aria-label="Instagram">
+        <img src="./icons8-instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://es.pinterest.com/bodaonclick/" target="_blank" aria-label="Pinterest">
+        <img src="./icons8-pinterest.svg" alt="Pinterest" />
+      </a>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+
+</body>
+</html>
+  
